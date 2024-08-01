@@ -4,59 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanksgiving Quiz</title>
-    <script>
-        function calculateResult() {
-            const form = document.getElementById('quiz-form');
-            const answers = form.querySelectorAll('input[type="radio"]:checked');
-            const resultCounts = { A: 0, B: 0, C: 0, D: 0, E: 0};
-
-            answers.forEach(answer => {
-                const value = answer.value;
-                resultCounts[value]++;
-            });
-
-            // Calcule o resultado com base nas contagens
-            // Exemplo: se resultCounts.A > resultCounts.B, mostre "Você gosta de peru assado!"
-
-            // Exemplo de lógica:
-            const maxCount = Math.max(...Object.values(resultCounts));
-
-            // Encontre os valores empatados com o máximo
-            const tiedValues = Object.keys(resultCounts).filter(key => resultCounts[key] === maxCount);
-
-            // Se houver mais de um valor empatado, sorteie aleatoriamente
-            if (tiedValues.length > 1) {
-               const randomIndex = Math.floor(Math.random() * tiedValues.length);
-               const winner = tiedValues[randomIndex];
-               resultCounts[winner] += 1;
-            } else {
-               // Do Nothing
-            }
-            if (resultCounts.A > resultCounts.B && resultCounts.A > resultCounts.C && resultCounts.A > resultCounts.D && resultCounts.A > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo do mito do thanksgiving!";
-                 break;
-            } else if (resultCounts.B > resultCounts.A && resultCounts.B > resultCounts.C && resultCounts.B > resultCounts.D && resultCounts.B > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo do Thanksgiving nos dias atuais!";
-                 break;
-            } else if (resultCounts.C > resultCounts.A && resultCounts.C > resultCounts.B && resultCounts.C > resultCounts.D && resultCounts.C > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo do contexto histórico nos EUA!";
-                 break;
-            } else if (resultCounts.D > resultCounts.A && resultCounts.D > resultCounts.B && resultCounts.D > resultCounts.C && resultCounts.D > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo da relação moral do thanksgiving!";
-                 break;
-            } else if (resultCounts.E > resultCounts.A && resultCounts.E > resultCounts.B && resultCounts.E > resultCounts.C && resultCounts.E > resultCounts.D) {
-                 document.getElementById('result').textContent = "Grupo da relação do thanksgiving com a blackfriday!";
-                 break;
-            }
-            
-        }
-    </script>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
             text-align: center;
         }
+         p {
+            font-weight: bold;
+            color: black;
+            background-color: #007bff;
+        }
+
 
         h1 {
             color: #333;
@@ -98,6 +58,53 @@
 <body>
     <h1>Thanksgiving Quiz</h1>
     <form id="quiz-form">
+        <script type="text/javascript">
+        function calculateResult() {
+            const form = document.getElementById('quiz-form');
+            const answers = form.querySelectorAll('input[type="radio"]:checked');
+            const resultCounts = { A: 0, B: 0, C: 0, D: 0, E: 0};
+
+            answers.forEach(answer => {
+                const value = answer.value;
+                resultCounts[value]++;
+            });
+
+            // Calcule o resultado com base nas contagens
+            // Exemplo: se resultCounts.A > resultCounts.B, mostre "Você gosta de peru assado!"
+
+            // Exemplo de lógica:
+            const maxCount = Math.max(...Object.values(resultCounts));
+
+            // Encontre os valores empatados com o máximo
+            const tiedValues = Object.keys(resultCounts).filter(key => resultCounts[key] === maxCount);
+
+            // Se houver mais de um valor empatado, sorteie aleatoriamente
+            if (tiedValues.length > 1) {
+               const randomIndex = Math.floor(Math.random() * tiedValues.length);
+               const winner = tiedValues[randomIndex];
+               resultCounts[winner] += 1;
+            } else {
+               // Do Nothing
+            }
+            if (resultCounts.A > resultCounts.B && resultCounts.A > resultCounts.C && resultCounts.A > resultCounts.D && resultCounts.A > resultCounts.E) {
+                 document.getElementById('result').textContent = "Grupo do mito do thanksgiving!";
+                 return;
+            } else if (resultCounts.B > resultCounts.A && resultCounts.B > resultCounts.C && resultCounts.B > resultCounts.D && resultCounts.B > resultCounts.E) {
+                 document.getElementById('result').textContent = "Grupo do Thanksgiving nos dias atuais!";
+                 return;
+            } else if (resultCounts.C > resultCounts.A && resultCounts.C > resultCounts.B && resultCounts.C > resultCounts.D && resultCounts.C > resultCounts.E) {
+                 document.getElementById('result').textContent = "Grupo do contexto histórico nos EUA!";
+                 return;
+            } else if (resultCounts.D > resultCounts.A && resultCounts.D > resultCounts.B && resultCounts.D > resultCounts.C && resultCounts.D > resultCounts.E) {
+                 document.getElementById('result').textContent = "Grupo da relação moral do thanksgiving!";
+                 return;
+            } else if (resultCounts.E > resultCounts.A && resultCounts.E > resultCounts.B && resultCounts.E > resultCounts.C && resultCounts.E > resultCounts.D) {
+                 document.getElementById('result').textContent = "Grupo da relação do thanksgiving com a blackfriday!";
+                 return;
+            }
+            
+        }
+        </script>
         <!-- Pergunta 1 -->
         <p>Qual é a sua comida favorita para o Thanksgiving?</p>
         <label>
