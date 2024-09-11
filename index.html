@@ -1,238 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanksgiving Quiz</title>
-    
+    <title>Quiz sobre o Regime Militar no Brasil</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-         p {
-            font-weight: bold;
-            color: black;
-            background-color: #007bff;
-        }
-
-
-        h1 {
-            color: #333;
-        }
-
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
+        .quiz-container {
             background-color: #fff;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
         }
-
-        label {
-            display: block;
+        .quiz-header {
+            margin-bottom: 20px;
+        }
+        .quiz-header h2 {
+            margin: 0;
+        }
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        .quiz-options li {
             margin-bottom: 10px;
         }
-
-        input[type="radio"] {
-            margin-right: 5px;
+        .quiz-options input {
+            margin-right: 10px;
         }
-
-        button {
+        .quiz-footer {
+            text-align: center;
+        }
+        .quiz-footer button {
+            padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
             border: none;
-            padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
         }
-
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
+        .quiz-footer button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Thanksgiving Quiz</h1>
-    <form id="quiz-form">
-        <script type="text/javascript">
-        function calculateResult() {
-            const form = document.getElementById('quiz-form');
-            const answers = form.querySelectorAll('input[type="radio"]:checked');
-            const resultCounts = { A: 0, B: 0, C: 0, D: 0, E: 0};
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2>Quiz sobre o Regime Militar no Brasil</h2>
+        </div>
+        <div class="quiz-body">
+            <div class="quiz-question">
+                <p>1. Quem foi o primeiro presidente militar do regime que se iniciou em 1964?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q1" value="A"> A) Costa e Silva</li>
+                    <li><input type="radio" name="q1" value="B"> B) João Goulart</li>
+                    <li><input type="radio" name="q1" value="C"> C) Castello Branco</li>
+                    <li><input type="radio" name="q1" value="D"> D) Emílio Garrastazu</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>2. Durante o governo de qual presidente ocorreu a fase mais repressiva do regime militar?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q2" value="A"> A) João Goulart</li>
+                    <li><input type="radio" name="q2" value="B"> B) Costa e Silva</li>
+                    <li><input type="radio" name="q2" value="C"> C) Emílio Garrastazu</li>
+                    <li><input type="radio" name="q2" value="D"> D) Castello Branco</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>3. Em que ano começou o governo de Castello Branco?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q3" value="A"> A) 1962</li>
+                    <li><input type="radio" name="q3" value="B"> B) 1964</li>
+                    <li><input type="radio" name="q3" value="C"> C) 1967</li>
+                    <li><input type="radio" name="q3" value="D"> D) 1969</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>4. Qual foi o impacto da ditadura militar sobre a dívida externa do Brasil?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q4" value="A"> A) Redução da dívida para 10% do PIB</li>
+                    <li><input type="radio" name="q4" value="B"> B) Aumento da dívida para mais de 54% do PIB</li>
+                    <li><input type="radio" name="q4" value="C"> C) Estabilidade da dívida em 15,7% do PIB</li>
+                    <li><input type="radio" name="q4" value="D"> D) Eliminação total da dívida externa</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>5. O que permitia a política de censura durante o regime militar?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q5" value="A"> A) Liberdade de expressão</li>
+                    <li><input type="radio" name="q5" value="B"> B) Expansão cultural</li>
+                    <li><input type="radio" name="q5" value="C"> C) Controle de notícias, artes e perseguição de opositores</li>
+                    <li><input type="radio" name="q5" value="D"> D) Democratização da informação</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>6. O que significa o termo "desaparecidos políticos" no contexto da ditadura militar?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q6" value="A"> A) Pessoas que viajaram para o exterior</li>
+                    <li><input type="radio" name="q6" value="B"> B) Pessoas que mudaram de ideologia política</li>
+                    <li><input type="radio" name="q6" value="C"> C) Pessoas que sumiram após serem detidas pela polícia</li>
+                    <li><input type="radio" name="q6" value="D"> D) Pessoas que se tornaram clandestinas por escolha própria</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>7. Qual compositor utilizou a palavra "Cálice" como metáfora para evitar a censura?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q7" value="A"> A) Milton Nascimento</li>
+                    <li><input type="radio" name="q7" value="B"> B) Caetano Veloso</li>
+                    <li><input type="radio" name="q7" value="C"> C) Gilberto Gil</li>
+                    <li><input type="radio" name="q7" value="D"> D) Chico Buarque</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>8. Qual foi uma das consequências sociais mais marcantes da ditadura militar no Brasil?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q8" value="A"> A) Redução da inflação</li>
+                    <li><input type="radio" name="q8" value="B"> B) Aprofundamento das desigualdades sociais</li>
+                    <li><input type="radio" name="q8" value="C"> C) Julgamento dos militares envolvidos em crimes</li>
+                    <li><input type="radio" name="q8" value="D"> D) Melhoria na educação pública</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>9. O que representava a canção "Apesar de Você", de Chico Buarque?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q9" value="A"> A) Um hino religioso</li>
+                    <li><input type="radio" name="q9" value="B"> B) Um manifesto patriótico</li>
+                    <li><input type="radio" name="q9" value="C"> C) Uma crítica à falta de liberdades durante a ditadura militar</li>
+                    <li><input type="radio" name="q9" value="D"> D) Uma homenagem aos militares</li>
+                </ul>
+            </div>
+            <div class="quiz-question">
+                <p>10. Qual foi o papel da Comissão Nacional da Verdade criada em 2011?</p>
+                <ul class="quiz-options">
+                    <li><input type="radio" name="q10" value="A"> A) Promover a Anistia</li>
+                    <li><input type="radio" name="q10" value="B"> B) Investigar casos de desaparecimento e mortes durante a ditadura</li>
+                    <li><input type="radio" name="q10" value="C"> C) Aumentar a censura cultural</li>
+                                        <li><input type="radio" name="q10" value="D"> D) Elaborar novas leis de repressão</li>
+                </ul>
+            </div>
+        </div>
+        <div class="quiz-footer">
+            <button onclick="submitQuiz()">Enviar</button>
+        </div>
+    </div>
 
-            answers.forEach(answer => {
-                const value = answer.value;
-                resultCounts[value]++;
-            });
+    <script>
+        function submitQuiz() {
+            const answers = {
+                q1: 'C',
+                q2: 'C',
+                q3: 'B',
+                q4: 'B',
+                q5: 'C',
+                q6: 'C',
+                q7: 'D',
+                q8: 'B',
+                q9: 'C',
+                q10: 'B'
+            };
 
-            // Calcule o resultado com base nas contagens
-            // Exemplo: se resultCounts.A > resultCounts.B, mostre "Você gosta de peru assado!"
-
-            // Exemplo de lógica:
-            const maxCount = Math.max(...Object.values(resultCounts));
-
-            // Encontre os valores empatados com o máximo
-            const tiedValues = Object.keys(resultCounts).filter(key => resultCounts[key] === maxCount);
-
-            // Se houver mais de um valor empatado, sorteie aleatoriamente
-            if (tiedValues.length > 1) {
-               const randomIndex = Math.floor(Math.random() * tiedValues.length);
-               const winner = tiedValues[randomIndex];
-               resultCounts[winner] += 1;
-            } else {
-               // Do Nothing
+            let score = 0;
+            for (let i = 1; i <= 10; i++) {
+                const question = document.querySelector(`input[name="q${i}"]:checked`);
+                if (question && question.value === answers[`q${i}`]) {
+                    score++;
+                }
             }
-            if (resultCounts.A > resultCounts.B && resultCounts.A > resultCounts.C && resultCounts.A > resultCounts.D && resultCounts.A > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo do mito do thanksgiving!";
-                 return;
-            } else if (resultCounts.B > resultCounts.A && resultCounts.B > resultCounts.C && resultCounts.B > resultCounts.D && resultCounts.B > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo do Thanksgiving nos dias atuais!";
-                 return;
-            } else if (resultCounts.C > resultCounts.A && resultCounts.C > resultCounts.B && resultCounts.C > resultCounts.D && resultCounts.C > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo do contexto histórico nos EUA!";
-                 return;
-            } else if (resultCounts.D > resultCounts.A && resultCounts.D > resultCounts.B && resultCounts.D > resultCounts.C && resultCounts.D > resultCounts.E) {
-                 document.getElementById('result').textContent = "Grupo da relação moral do thanksgiving!";
-                 return;
-            } else if (resultCounts.E > resultCounts.A && resultCounts.E > resultCounts.B && resultCounts.E > resultCounts.C && resultCounts.E > resultCounts.D) {
-                 document.getElementById('result').textContent = "Grupo da relação do thanksgiving com a blackfriday!";
-                 return;
-            }
-            
+
+            alert(`Você acertou ${score} de 10 perguntas.`);
         }
-        </script>
-        <!-- Pergunta 1 -->
-        <p>Qual é a sua comida favorita para o Thanksgiving?</p>
-        <label>
-            <input type="radio" name="q1" value="A"> Peru assado
-        </label>
-        <label>
-            <input type="radio" name="q1" value="B"> Torta de abóbora
-        </label>
-        <label>
-            <input type="radio" name="q1" value="C"> Purê de Batata
-        </label>
-        <label>
-            <input type="radio" name="q1" value="D"> Crawnberry sauce
-        </label>
-        <label>
-            <input type="radio" name="q1" value="E"> Não tenho preferencia, só quero comer!
-        </label>
-        <!-- Adicione mais opções aqui -->
-
-        <p>Qual sua leitura favorita?</p>
-        <label>
-            <input type="radio" name="q2" value="A"> Livros de mitologia
-        </label>
-        <label>
-            <input type="radio" name="q2" value="B"> Prefiro filmes
-        </label>
-        <label>
-            <input type="radio" name="q2" value="C"> Livros de história
-        </label>
-        <label>
-            <input type="radio" name="q2" value="D"> A bíblia
-        </label>
-        <label>
-            <input type="radio" name="q2" value="E"> Revistas e gibis
-        </label>
-
-        <p>O que você mais acha importante no feriado do dia de ação de graças?</p>
-        <label>
-            <input type="radio" name="q3" value="A"> Dar as graças aos sucessos na sociedade
-        </label>
-        <label>
-            <input type="radio" name="q3" value="B"> Dar graças aos sucessos na vida
-        </label>
-        <label>
-            <input type="radio" name="q3" value="C"> Relembrar das lutas dos peregrinos
-        </label>
-        <label>
-            <input type="radio" name="q3" value="D"> Dar graças à deus
-        </label>
-        <label>
-            <input type="radio" name="q3" value="E"> Economizar para a black friday
-        </label>
-
-        <p>Onde você preferiria festejar o dia de ações de graça?</p>
-        <label>
-            <input type="radio" name="q4" value="A"> Juntando toda a vizinhança
-        </label>
-        <label>
-            <input type="radio" name="q4" value="B"> Na minha casa com minha família
-        </label>
-        <label>
-            <input type="radio" name="q4" value="C"> Assistindo filmes sobre o assunto
-        </label>
-        <label>
-            <input type="radio" name="q4" value="D"> Ajudando os necessitados com trabalho voluntário
-        </label>
-        <label>
-            <input type="radio" name="q4" value="E"> Na igreja
-        </label>
-
-        <p>Onde você viajaria?</p>
-        <label>
-            <input type="radio" name="q5" value="A"> Onde eu me aventure
-        </label>
-        <label>
-            <input type="radio" name="q5" value="B"> Estando com minha família
-        </label>
-        <label>
-            <input type="radio" name="q5" value="C"> Para um lugar cheio de história a ser contada
-        </label>
-        <label>
-            <input type="radio" name="q5" value="D"> Para um lugar onde me conectaria com deus
-        </label>
-        <label>
-            <input type="radio" name="q5" value="E"> Para a melhor festa do mundo
-        </label>
-
-        <p>Qual distração você prefere?</p>
-        <label>
-            <input type="radio" name="q6" value="A"> Jogar PS4/Xbox
-        </label>
-        <label>
-            <input type="radio" name="q6" value="B"> Assistir TV
-        </label>
-        <label>
-            <input type="radio" name="q6" value="C"> Jogar jogos retrô
-        </label>
-        <label>
-            <input type="radio" name="q6" value="D"> Meditar
-        </label>
-        <label>
-            <input type="radio" name="q6" value="E"> Olhar roupa na shein e utensílios na shoppe
-        </label>
-
-        <p>Qual grupo ta com menos gente(Independente do resultado, preferencialmente escolha este)?</p>
-        <label>
-            <input type="radio" name="q7" value="A"> Grupo do mito do thanksgiving
-        </label>
-        <label>
-            <input type="radio" name="q7" value="B"> Grupo do thanksgiving atual
-        </label>
-        <label>
-            <input type="radio" name="q7" value="C"> Grupo do contexto histórico nos EUA
-        </label>
-        <label>
-            <input type="radio" name="q7" value="D"> Grupo da relação moral do thanksgiving
-        </label>
-        <label>
-            <input type="radio" name="q7" value="E"> Grupo da black friday
-        </label>
-
-        
-
-        <button type="button" onclick="calculateResult()">Confirmar</button>
-    </form>
-
-    <div id="result"></div>
-
-    
+    </script>
 </body>
 </html>
