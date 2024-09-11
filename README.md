@@ -1,1 +1,1 @@
-A thanksgiving quiz for school
+A history quiz for school
